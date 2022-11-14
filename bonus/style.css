@@ -1,0 +1,56 @@
+#pager {
+    width: 40%;
+    max-width: 600px;
+
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 10px 0;
+
+    text-align: center;
+    background-color: rgb(170, 222, 224);
+}
+
+#input-add-item {
+    margin-bottom: 1rem;
+}
+
+#shopping-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#shopping-list>div {
+    position: relative;
+    min-height: 25px;
+    padding: 4px;
+    border: 1px solid snow;
+    border-radius: 100px;
+    width: 60%;
+}
+
+#shopping-list>div:hover {
+    background-color: snow;
+}
+/* 
+#shopping-list>div::after {
+    content: "delete";
+    position: absolute;
+
+    right: 5px;
+    top: 50%;
+    translate: 0 -50%;
+
+    padding: 2px 5px;
+    border-radius: 100px;
+
+    background-color: red;
+    color: snow;
+}
+
+#shopping-list>div::after:hover {
+    border: 1px inset black;
+    color: black;
+} */
