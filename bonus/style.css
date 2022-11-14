@@ -20,9 +20,11 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 2rem;
+    list-style: none;
+    padding: 0;
 }
 
-#shopping-list>div {
+#shopping-list>li {
     position: relative;
     min-height: 25px;
     padding: 4px 0 4px 15px;
@@ -34,7 +36,7 @@
     align-items: center;
 }
 
-#shopping-list>div:hover {
+#shopping-list>li:hover {
     background-color: rgba(255, 250, 250, 0.51);
 }
 

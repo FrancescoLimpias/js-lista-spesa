@@ -22,7 +22,7 @@ const shopList = [
 let i = 0;
 while(i < shopList.length){
 
-    const item = document.createElement("div");
+    const item = document.createElement("li");
     item.innerHTML = shopList[i];
     shoppingListElement.append(item);
 

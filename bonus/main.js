@@ -28,7 +28,7 @@ while (i < shopList.length) {
     const scopeIndex = i;
 
     // Create full itemElement
-    const itemElement = document.createElement("div");
+    const itemElement = document.createElement("li");
     
     // Create spanItem
     const spanItem = document.createElement("span");
@@ -72,7 +72,7 @@ inputAddItem.addEventListener("click", function () {
         shopList.push(item);
     
         // Create full itemElement
-        const itemElement = document.createElement("div");
+        const itemElement = document.createElement("li");
         
         // Create spanItem
         const spanItem = document.createElement("span");
