@@ -12,10 +12,19 @@ const shopList = [
 ];
 
 // Write list
-for (let i = 0; i < shopList.length; i++) {
+/* for (let i = 0; i < shopList.length; i++) {
 
     const item = document.createElement("div");
     item.innerHTML = shopList[i];
     shoppingListElement.append(item);
 
+} */
+let i = 0;
+while(i < shopList.length){
+
+    const item = document.createElement("div");
+    item.innerHTML = shopList[i];
+    shoppingListElement.append(item);
+
+    i++;
 }
