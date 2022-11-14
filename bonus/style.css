@@ -25,10 +25,13 @@
 #shopping-list>div {
     position: relative;
     min-height: 25px;
-    padding: 4px;
+    padding: 4px 0 4px 15px;
     border: 1px solid snow;
     border-radius: 100px;
     width: 60%;
+
+    display: flex;
+    align-items: center;
 }
 
 #shopping-list>div:hover {
