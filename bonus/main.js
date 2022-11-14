@@ -24,8 +24,35 @@ const shopList = [
 let i = 0;
 while (i < shopList.length) {
 
+    // To store index in the cycle block
+    const scopeIndex = i;
+
+    // Create full itemElement
     const itemElement = document.createElement("div");
-    itemElement.innerHTML = shopList[i];
+    
+    // Create spanItem
+    const spanItem = document.createElement("span");
+    spanItem.innerHTML = shopList[i];
+
+    // Link delete button
+    const buttonDel = document.createElement("button");
+    buttonDel.innerHTML = "elimina";
+    buttonDel.classList.add("button-delete");
+    buttonDel.addEventListener("click", function(){
+
+        // Delete itemElement from shopping list
+        shoppingListElement.removeChild(itemElement);
+
+        // Delete item from shopList
+        shopList.splice(scopeIndex, 1);
+
+    });
+
+    // Build itemElement
+    itemElement.append(spanItem);
+    itemElement.append(buttonDel);
+
+    // Add to shopping list
     shoppingListElement.append(itemElement);
 
     i++;
@@ -38,17 +65,43 @@ inputAddItem.addEventListener("click", function () {
     const item = inputItem.value;
     if (item != "") {
 
+        // To store index in the cycle block
+        const itemIndex = shopList.length;
+
         // Store item
         shopList.push(item);
+    
+        // Create full itemElement
+        const itemElement = document.createElement("div");
+        
+        // Create spanItem
+        const spanItem = document.createElement("span");
+        spanItem.innerHTML = item;
+    
+        // Link delete button
+        const buttonDel = document.createElement("button");
+        buttonDel.innerHTML = "elimina";
+        buttonDel.classList.add("button-delete");
+        buttonDel.addEventListener("click", function(){
+    
+            // Delete itemElement from shopping list
+            shoppingListElement.removeChild(itemElement);
+    
+            // Delete item from shopList
+            shopList.splice(itemIndex, 1);
+    
+        });
+    
+        // Build itemElement
+        itemElement.append(spanItem);
+        itemElement.append(buttonDel);
 
         // Add to #shopping-list
-        const itemElement = document.createElement("div");
-        itemElement.innerHTML = item;
         shoppingListElement.append(itemElement);
 
         // Clear #inputItem
         inputItem.value = "";
-        
+
     }
 
 });
